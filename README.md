@@ -94,7 +94,7 @@ manager.push(message)
 
 -   ### Media messages
 
-    **NOTE** Currently supporting only media hosted in an external webserver. Media files and Text entities can be pushed in a single message.
+    **NOTE** Currently only supporting media hosted in an external webserver. Media files and Text entities can be pushed in a single message.
 
     ```py
     from Whatsapy import Media
@@ -113,7 +113,7 @@ manager.push(message)
     manager.push(message)
     ```
 
--   ### Medias can be sent before or after sending the text message entity accompanied in a Message instance.
+-   ### Medias can be sent before or after sending the Text entity accompanied in a Message instance.
 
     ```py
     from Whatsapy import Media
