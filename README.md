@@ -1,11 +1,11 @@
-# Whatsapy
+# whatsappy
 
 Unofficial Wrapper for Meta's [Whatsap Cloud API](https://developers.facebook.com/docs/whatsapp/cloud-api) written in python
 
 ## INSTALL
 
 ```bash
-$ pip install whatsapy
+$ pip install whatsappy
 ```
 
 ## PREREQUISITES
@@ -19,13 +19,13 @@ $ pip install whatsapy
 ```py
 import os
 
-from whatsapy import Whatsapy
-from whatsapy import Message, Text
+from whatsappy import Whatsappy
+from whatsappy import Message, Text
 
 ACCESS_TOKEN = os.environ('ACCESS_TOKEN')
 PHONE_NUMBER_ID = os.environ('PHONE_NUMBER_ID')
 
-manager = Whatsapy(ACCESS_TOKEN, PHONE_NUMBER_ID) # Create an API manager instance
+manager = Whatsappy(ACCESS_TOKEN, PHONE_NUMBER_ID) # Create an API manager instance
 
 message = Message(to="91XXXXXXXXXX") # use country code without +
 
@@ -42,9 +42,9 @@ manager.push(message)
 -   ### Text Messages
 
     ```py
-    from Whatsapy import Text
+    from whatsappy import Text
 
-    manager = Whatsapy(ACCESS_TOKEN, PHONE_NUMBER_ID) # Create an API manager instance
+    manager = Whatsappy(ACCESS_TOKEN, PHONE_NUMBER_ID) # Create an API manager instance
 
     message = Message(to="91XXXXXXXXXX") # use country code without +
 
@@ -58,9 +58,9 @@ manager.push(message)
 -   ### Text Messages with link preview
 
     ```py
-    from Whatsapy import Text
+    from whatsappy import Text
 
-    manager = Whatsapy(ACCESS_TOKEN, PHONE_NUMBER_ID) # Create an API manager instance
+    manager = Whatsappy(ACCESS_TOKEN, PHONE_NUMBER_ID) # Create an API manager instance
 
     message = Message(to="91XXXXXXXXXX") # use country code without +
 
@@ -76,9 +76,9 @@ manager.push(message)
     **NOTE** Location and Text entities should be pushed in different message instances
 
     ```py
-    from Whatsapy import Location
+    from whatsappy import Location
 
-    manager = Whatsapy(ACCESS_TOKEN, PHONE_NUMBER_ID) # Create an API manager instance
+    manager = Whatsappy(ACCESS_TOKEN, PHONE_NUMBER_ID) # Create an API manager instance
 
     location = Location(
         long="LONGITUDE",
@@ -97,9 +97,9 @@ manager.push(message)
     **NOTE** Currently only supporting media hosted in an external webserver. Media files and Text entities can be pushed in a single message.
 
     ```py
-    from Whatsapy import Media
+    from whatsappy import Media
 
-    manager = Whatsapy(ACCESS_TOKEN, PHONE_NUMBER_ID) # Create an API manager instance
+    manager = Whatsappy(ACCESS_TOKEN, PHONE_NUMBER_ID) # Create an API manager instance
 
     media = Media(
         type="image", # supported types are image, video, document, audio
@@ -116,9 +116,9 @@ manager.push(message)
 -   ### Medias can be sent before or after sending the Text entity accompanied in a Message instance.
 
     ```py
-    from Whatsapy import Media
+    from whatsappy import Media
 
-    manager = Whatsapy(ACCESS_TOKEN, PHONE_NUMBER_ID) # Create an API manager instance
+    manager = Whatsappy(ACCESS_TOKEN, PHONE_NUMBER_ID) # Create an API manager instance
 
     media = Media(
         type="image", # supported types are image, video, document, audio
