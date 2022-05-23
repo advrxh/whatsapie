@@ -1,0 +1,7 @@
+site_name: Whatsappy
+site_url: https://advrxh.github.com/Whatsappy
+nav:
+  - Home: index.md
+  - About: about.md
+theme:
+  name: material
