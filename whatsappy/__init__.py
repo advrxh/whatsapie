@@ -12,7 +12,8 @@ from whatsappy.constants import (
 
 class Whatsappy:
     """
-    Whatsapp Cloud API main wrapper class.
+    Whatsapp Cloud API manager class, this class handles the functions of making
+    requests to Meta's cloud api.
     """
 
     def __init__(self, access_token: str, phone_number_id: str) -> None:

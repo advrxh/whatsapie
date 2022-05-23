@@ -9,7 +9,8 @@ from whatsappy.schema_generator.media_schema import generate_media_schema
 
 class SchemaGenerator:
     """
-    Whatsapi BodyGenerator. Takes in native python object class and converts it into json api bodies.
+    Schema generator class, that generated api body schemas according to
+    provided arguments of type Message.
     """
 
     def __init__(self):
@@ -18,8 +19,11 @@ class SchemaGenerator:
     def generate(
         self,
         message: Message,
-        dump_json_str: bool = True,
+        dump_json_str: bool = True,  # If set to True returns a stringified version of the dict object
     ):
+        """
+        Generates schema for the provided message argument.
+        """
         body = {"messaging_product": "whatsapp", "recipient_type": "individual"}
         body["to"] = message.to
 
@@ -38,4 +42,7 @@ class SchemaGenerator:
         return body
 
     def dump_json(self, body):
+        """
+        Convert native python dictionary to a stringified json.
+        """
         return json.dumps(body)
