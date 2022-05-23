@@ -1,6 +1,6 @@
 # whatsappy
 
-Unofficial Wrapper for Meta's [Whatsap Cloud API](https://developers.facebook.com/docs/whatsapp/cloud-api) written in python
+Unofficial Wrapper for Meta's [Whatsapp Cloud API](https://developers.facebook.com/docs/whatsapp/cloud-api) written in python
 
 ## INSTALL
 
@@ -12,127 +12,7 @@ $ pip install whatsappy
 
 -   Follow Meta's [Whatsapp Cloud API Documentation](https://developers.facebook.com/docs/whatsapp/cloud-api) and obtain, meta business app [ACCESS_TOKEN](#) and [PHONE_NUMBER_ID]()
 
-*   For added security, store both of these values as environment variables
-
-## Simple Hello World Text Message
-
-```py
-import os
-
-from whatsappy import Whatsappy
-from whatsappy import Message, Text
-
-ACCESS_TOKEN = os.environ('ACCESS_TOKEN')
-PHONE_NUMBER_ID = os.environ('PHONE_NUMBER_ID')
-
-manager = Whatsappy(ACCESS_TOKEN, PHONE_NUMBER_ID) # Create an API manager instance
-
-message = Message(to="91XXXXXXXXXX") # use country code without +
-
-text = Text("Hello world")
-
-message.set_text(text)
-
-manager.push(message)
-
-```
-
-## Docs
-
--   ### Text Messages
-
-    ```py
-    from whatsappy import Text
-
-    manager = Whatsappy(ACCESS_TOKEN, PHONE_NUMBER_ID) # Create an API manager instance
-
-    message = Message(to="91XXXXXXXXXX") # use country code without +
-
-    text = Text(body="Hello world")
-
-    message.set_text(text)
-
-    manager.push(message)
-    ```
-
--   ### Text Messages with link preview
-
-    ```py
-    from whatsappy import Text
-
-    manager = Whatsappy(ACCESS_TOKEN, PHONE_NUMBER_ID) # Create an API manager instance
-
-    message = Message(to="91XXXXXXXXXX") # use country code without +
-
-    text = Text(body="Hello world", preview_url=True)
-
-    message.set_text(text)
-
-    manager.push(message)
-    ```
-
--   ### Location messages
-
-    **NOTE** Location and Text entities should be pushed in different message instances
-
-    ```py
-    from whatsappy import Location
-
-    manager = Whatsappy(ACCESS_TOKEN, PHONE_NUMBER_ID) # Create an API manager instance
-
-    location = Location(
-        long="LONGITUDE",
-        lat="LATITUDE",
-        name="LOCATION_NAME",
-        address="LOCATION_ADDRESS"
-    )
-
-    message.set_location(location)
-
-    manager.push(message)
-    ```
-
--   ### Media messages
-
-    **NOTE** Currently only supporting media hosted in an external webserver. Media files and Text entities can be pushed in a single message.
-
-    ```py
-    from whatsappy import Media
-
-    manager = Whatsappy(ACCESS_TOKEN, PHONE_NUMBER_ID) # Create an API manager instance
-
-    media = Media(
-        type="image", # supported types are image, video, document, audio
-        link="https://cdn.example.com/image.png",
-        caption="Image Caption", # captions are only supported with image entities
-        # filename="file.png", filenames can only be changed with document entities
-    )
-
-    message.set_media(media)
-
-    manager.push(message)
-    ```
-
--   ### Medias can be sent before or after sending the Text entity accompanied in a Message instance.
-
-    ```py
-    from whatsappy import Media
-
-    manager = Whatsappy(ACCESS_TOKEN, PHONE_NUMBER_ID) # Create an API manager instance
-
-    media = Media(
-        type="image", # supported types are image, video, document, audio
-        link="https://cdn.example.com/image.png",
-        caption="Image Caption", # captions are only supported with image entities
-        # filename="file.png", filenames can only be changed with document entities
-    )
-
-    message.set_media(media)
-    message.set_media_order("after") # order can be either before or after
-    manager.push(message)
-    ```
-
-# CONTRIBUTION
+## CONTRIBUTION
 
 This repo is open for contribution, create an ISSUE/PR or volunteer for an existing ISSUE
 
