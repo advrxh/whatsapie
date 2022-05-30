@@ -16,9 +16,9 @@ $ pip install whatsappy
 
 -   Follow Meta's [Whatsapp Cloud API Documentation](https://developers.facebook.com/docs/whatsapp/cloud-api) and obtain, meta business app [ACCESS_TOKEN](#) and [PHONE_NUMBER_ID]()
 
-# Documentation
+## Documentation
 
-Get started [here](https://advrxh.github.io/whatsappy/get-started/)
+-   Get started [here](https://advrxh.github.io/whatsappy/get-started/)
 
 ## CONTRIBUTION
 
