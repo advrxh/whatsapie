@@ -1,4 +1,4 @@
-# whatsappy
+# Whatsappy
 
 Unofficial wrapper for Meta's [**Whatsapp Cloud API**](https://developers.facebook.com/docs/whatsapp/cloud-api) written in Python
 
@@ -6,7 +6,7 @@ Unofficial wrapper for Meta's [**Whatsapp Cloud API**](https://developers.facebo
 
     Whatsappy is pronounced as `Whatsapp` - `py` seperately!
 
-## INSTALL
+## Installation
 
 ```console
 $ pip install whatsappy
@@ -16,7 +16,7 @@ $ pip install whatsappy
 
     Whatsappy requires python 3.10 or above
 
-## PREREQUISITES
+## Prerequisites
 
 -   Follow Meta's [Whatsapp Cloud API Documentation](https://developers.facebook.com/docs/whatsapp/cloud-api) and obtain, meta business app [ACCESS_TOKEN](#) and [PHONE_NUMBER_ID]()
 
@@ -24,7 +24,7 @@ $ pip install whatsappy
 
 -   Get started [here](/whatsappy/get-started/)
 
-## CONTRIBUTION
+## Contribution
 
 This repo is open for contribution. I'd love some contribution [here](https://github.com/advrxh/whatsappy)
 
