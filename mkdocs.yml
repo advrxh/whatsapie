@@ -1,7 +1,61 @@
 site_name: Whatsappy
-site_url: https://advrxh.github.com/Whatsappy
-nav:
-  - Home: index.md
-  - About: about.md
+site_description: Unofficial Wrapper for Meta's Whatsapp Cloud API written in Python
+site_url: https://advrxh.github.io/whatsappy
 theme:
   name: material
+  palette:
+  - media: "(prefers-color-scheme: light)"
+    scheme: default
+    primary: teal
+    accent: light blue
+    toggle:
+      icon: material/lightbulb
+      name: Switch to light mode
+  - media: "(prefers-color-scheme: dark)"
+    scheme: slate
+    primary: teal
+    accent: light green
+    toggle:
+      icon: material/lightbulb-outline
+      name: Switch to dark mode
+  features:
+  - search.suggest
+  - search.highlight
+  - content.code.annotate
+  - content.tooltips
+  icon:
+    repo: fontawesome/brands/github-alt
+  favicon: img/favicon.png
+  language: en
+repo_name: advrxh/whatsappy
+repo_url: https://github.com/advrxh/whatsappy
+edit_uri: ''
+plugins:
+- search
+nav:
+  - Home : index.md
+  - Get Started: get-started.md
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - abbr
+  - attr_list
+extra:
+  analytics:
+    provider: google
+    property: UA-133183413-1
+  social:
+  - icon: fontawesome/brands/github-alt
+    link: https://github.com/advrxh/whatsappy
+  - icon: fontawesome/brands/twitter
+    link: https://twitter.com/advrxh
