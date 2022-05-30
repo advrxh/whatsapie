@@ -1,17 +1,27 @@
-# Welcome to MkDocs
+# whatsappy
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+Unofficial wrapper for Meta's [**Whatsapp Cloud API**](https://developers.facebook.com/docs/whatsapp/cloud-api) written in Python
 
-## Commands
+## INSTALL
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+```console
+$ pip install whatsappy
+```
 
-## Project layout
+!!! note
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+    Whatsappy requires python 3.10 or above
+
+## PREREQUISITES
+
+-   Follow Meta's [Whatsapp Cloud API Documentation](https://developers.facebook.com/docs/whatsapp/cloud-api) and obtain, meta business app [ACCESS_TOKEN](#) and [PHONE_NUMBER_ID]()
+
+# Get Started
+
+Get started [here](/whatsappy/get-started/)
+
+## CONTRIBUTION
+
+This repo is open for contribution. I'd love some contribution [here](https://github.com/advrxh/whatsappy)
+
+Maintained by [Aadil Varsh](https://advrxh.github.io)
