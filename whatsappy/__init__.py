@@ -17,6 +17,13 @@ class Whatsappy:
     """
 
     def __init__(self, access_token: str, phone_number_id: str) -> None:
+        """Initializes the Whatsappy manager class.
+
+        Args:
+            access_token: Meta's Whatsapp Cloud API user specific access token.
+            phone_number_id: Meta's Whatsapp Cloud API user specific phone number ID.
+
+        """
         self.schema_generator = SchemaGenerator()
         self.access_token = access_token
         self.phone_number_id = phone_number_id
@@ -26,11 +33,20 @@ class Whatsappy:
         )
 
     def send(self, message: Message):
+        """Invoke this method from an instance to send a whatsapp message
+
+        Args:
+            message: Must be a type of Message Instance supports **TextMessage, LocationMessage, MediaMessage**
+
+        Returns:
+            A bool status of the performed api call
+
+        Raises:
+            ErrorResponse: If the Cloud API returns and error response
+        """
         body = self.schema_generator.generate(message, dump_json_str=True)
         headers = REQUEST_HEADERS
         headers["Authorization"] = f"Bearer {self.access_token}"
-
-        print(body)
 
         response = rq.post(self.url, headers=headers, data=body)
 

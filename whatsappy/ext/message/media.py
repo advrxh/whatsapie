@@ -7,6 +7,17 @@ from whatsappy.constants import (
 
 
 class MediaMessage(Message):
+    """Inherits from Message class.
+
+    Inherits from Message class, represents a Media Message api object.
+
+    Args:
+        type: Media type, Supports 'image', 'audio', 'document', 'video'
+        link: Link to the hosted media on the web.
+        caption: Media caption.
+        filename: Media filename.
+    """
+
     def __init__(
         self,
         to: str,
@@ -22,6 +33,14 @@ class MediaMessage(Message):
     def set_params(
         self, type: str, link: str, caption: str = None, filename: str = None
     ):
+        """Sets the required instance parameters.
+
+        Args:
+            type: Media type, Supports 'image', 'audio', 'document', 'video'
+            link: Link to the hosted media on the web.
+            caption: Media caption.
+            filename: Media filename.
+        """
         self.type = type
         self.link = link
         self.caption = None

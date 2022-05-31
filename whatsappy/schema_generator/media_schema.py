@@ -6,6 +6,15 @@ from whatsappy.constants import (
 
 
 def generate_media_schema(body: dict, message: MediaMessage):
+    """Generate schema for MediaMessage.
+
+    Args:
+        body: Parent api schema object.
+        message: MediaMessage instance.
+
+    Returns:
+        body: Schema body
+    """
     body["type"] = message.type
     body[message.type] = {"link": message.link}
 
