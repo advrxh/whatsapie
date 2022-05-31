@@ -34,8 +34,8 @@ plugins:
 - search
 - mkdocstrings
 nav:
-  - Home : index.md
-  - Get Started: get-started.md
+  - 'Home' : index.md
+  - 'Get Started': get-started.md
   - 'Examples':
     - 'Text Messages': Examples/TextMessage.md
     - 'Media Messages': Examples/MediaMessage.md
