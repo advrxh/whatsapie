@@ -32,9 +32,29 @@ repo_url: https://github.com/advrxh/whatsappy
 edit_uri: ''
 plugins:
 - search
+- mkdocstrings
 nav:
   - Home : index.md
   - Get Started: get-started.md
+  - 'Examples':
+    - 'Text Messages': Examples/TextMessage.md
+    - 'Media Messages': Examples/MediaMessage.md
+    - 'Location Messages': Examples/LocationMessage.md
+  - 'Reference':
+    - 'errors.py': Reference/errors.md
+    - 'constants.py': Reference/constants.md
+    - '__init__.py': Reference/__init__.md
+    - 'ext':
+        - 'Message': 
+            - 'message.py': Reference/ext/message/message.md 
+            - 'text.py': Reference/ext/message/text.md 
+            - 'location.py': Reference/ext/message/location.md 
+            - 'media.py': Reference/ext/message/media.md'
+    - 'schema_generator':
+            - '__init__.py': Reference/schema_generator/__init__.md
+            - 'text_schema.py': Reference/schema_generator/text_schema.md
+            - 'location_schema.py': Reference/schema_generator/location_schema.md
+            - 'media_schema.py': Reference/schema_generator/media_schema.md
 markdown_extensions:
   - admonition
   - pymdownx.details
