@@ -1,9 +1,9 @@
 ### Basic Media Message
 
 ```py title="hello_world.py" linenums="1"
-from whatsappy import Whatsappy, MediaMessage
+from whatsapie import Whatsapie, MediaMessage
 
-manager = Whatsappy(ACCESS_TOKEN, PHONE_NUMBER_ID)
+manager = Whatsapie(ACCESS_TOKEN, PHONE_NUMBER_ID)
 
 location_message = MediaMessage(
     to="1XXXXXXXXX", # recipients registered whatsapp number

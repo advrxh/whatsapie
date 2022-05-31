@@ -1,3 +1,3 @@
-# whatsappy/ext/message/text.py
+# whatsapie/ext/message/text.py
 
-::: whatsappy.ext.message.text
+::: whatsapie.ext.message.text

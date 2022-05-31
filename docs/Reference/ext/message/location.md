@@ -1,3 +1,3 @@
-# whatsappy/ext/message/location.py
+# whatsapie/ext/message/location.py
 
-::: whatsappy.ext.message.location
+::: whatsapie.ext.message.location

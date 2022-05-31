@@ -1,3 +1,3 @@
-# whatsappy/schema_generator/location_schema.py
+# whatsapie/schema_generator/location_schema.py
 
-::: whatsappy.schema_generator.location_schema
+::: whatsapie.schema_generator.location_schema

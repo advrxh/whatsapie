@@ -1,3 +1,3 @@
-# whatsappy/schema_generator/media_schema.py
+# whatsapie/schema_generator/media_schema.py
 
-::: whatsappy.schema_generator.media_schema
+::: whatsapie.schema_generator.media_schema

@@ -1,3 +1,3 @@
-# whatsappy/constants.py
+# whatsapie/constants.py
 
-::: whatsappy.constants
+::: whatsapie.constants

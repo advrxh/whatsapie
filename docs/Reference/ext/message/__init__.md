@@ -1,3 +1,3 @@
-# `whatsappy/ext/message/__init__.py`
+# `whatsapie/ext/message/__init__.py`
 
-::: whatsappy.ext.message
+::: whatsapie.ext.message

@@ -1,16 +1,16 @@
-# whatsappy
+# whatsapie
 
 Unofficial wrapper for Meta's [**Whatsapp Cloud API**](https://developers.facebook.com/docs/whatsapp/cloud-api) written in Python
 
 ## INSTALL
 
 ```console
-$ pip install whatsappy
+$ pip install whatsapie
 ```
 
 !!! note
 
-    Whatsappy requires python 3.10 or above
+    whatsapie requires python 3.10 or above
 
 ## PREREQUISITES
 
@@ -18,10 +18,10 @@ $ pip install whatsappy
 
 ## Documentation
 
--   Get started [here](https://advrxh.github.io/whatsappy/get-started/)
+-   Get started [here](https://advrxh.github.io/whatsapie/get-started/)
 
 ## CONTRIBUTION
 
-This repo is open for contribution. I'd love some contribution [here](https://github.com/advrxh/whatsappy)
+This repo is open for contribution. I'd love some contribution [here](https://github.com/advrxh/whatsapie)
 
 Maintained by [Aadil Varsh](https://advrxh.github.io)

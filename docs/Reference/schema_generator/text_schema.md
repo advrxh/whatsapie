@@ -1,3 +1,3 @@
-# whatsappy/schema_generator/text_schema.py
+# whatsapie/schema_generator/text_schema.py
 
-::: whatsappy.schema_generator.text_schema
+::: whatsapie.schema_generator.text_schema

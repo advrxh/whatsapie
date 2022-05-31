@@ -1,9 +1,9 @@
 ## Basic Text Message
 
 ```py title="hello_world.py" linenums="1"
-from whatsappy import Whatsappy, TextMessage
+from whatsapie import Whatsapie, TextMessage
 
-manager = Whatsappy(ACCESS_TOKEN, PHONE_NUMBER_ID)
+manager = Whatsapie(ACCESS_TOKEN, PHONE_NUMBER_ID)
 
 text_message = TextMessage(
     to="1XXXXXXXXX",
@@ -17,9 +17,9 @@ manager.send(text_message)
 ## Basic Text Message with url preview
 
 ```py title="hello_world.py" linenums="1"
-from whatsappy import Whatsappy, TextMessage
+from whatsapie import whatsapie, TextMessage
 
-manager = Whatsappy(ACCESS_TOKEN, PHONE_NUMBER_ID)
+manager = Whatsapie(ACCESS_TOKEN, PHONE_NUMBER_ID)
 
 text_message = TextMessage(
     to="1XXXXXXXXX",

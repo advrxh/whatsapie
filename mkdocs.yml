@@ -1,6 +1,6 @@
-site_name: Whatsappy
+site_name: whatsapie
 site_description: Unofficial Wrapper for Meta's Whatsapp Cloud API written in Python
-site_url: https://advrxh.github.io/whatsappy
+site_url: https://advrxh.github.io/whatsapie
 theme:
   name: material
   palette:
@@ -27,8 +27,8 @@ theme:
     repo: fontawesome/brands/github-alt
   favicon: img/favicon.png
   language: en
-repo_name: advrxh/whatsappy
-repo_url: https://github.com/advrxh/whatsappy
+repo_name: advrxh/whatsapie
+repo_url: https://github.com/advrxh/whatsapie
 edit_uri: ''
 plugins:
 - search
@@ -76,6 +76,6 @@ extra:
     property: UA-133183413-1
   social:
   - icon: fontawesome/brands/github-alt
-    link: https://github.com/advrxh/whatsappy
+    link: https://github.com/advrxh/whatsapie
   - icon: fontawesome/brands/twitter
     link: https://twitter.com/advrxh

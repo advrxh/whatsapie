@@ -1,9 +1,9 @@
 ## Basic Location Message
 
 ```py title="hello_world.py" linenums="1"
-from whatsappy import Whatsappy, LocationMessage
+from whatsapie import Whatsapie, LocationMessage
 
-manager = Whatsappy(ACCESS_TOKEN, PHONE_NUMBER_ID)
+manager = Whatsapie(ACCESS_TOKEN, PHONE_NUMBER_ID)
 
 location_message = LocationMessage(
     to="1XXXXXXXXX", # recipients registered whatsapp number

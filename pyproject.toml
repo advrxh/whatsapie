@@ -1,10 +1,10 @@
 [tool.poetry]
-name = "whatsappy"
-version = "0.1.7"
+name = "whatsapie"
+version = "0.1.6"
 description = "Unofficial Python wrapper for Meta's whatsapp cloud API"
 readme = "README.md"
-homepage = "https://github.com/advrxh/whatsappy"
-repository = "https://github.com/advrxh/whatsappy"
+homepage = "https://github.com/advrxh/whatsapie"
+repository = "https://github.com/advrxh/whatsapie"
 keywords = ["whatsapp", "cloud", "api", "python", "wrapper"]
 authors = ["Aadil Varsh <aadilvarshofficial@gmail.com>"]
 license = "MIT"

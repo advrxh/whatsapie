@@ -1,3 +1,3 @@
-# `whatsappy/__init__.py`
+# `whatsapie/__init__.py`
 
-::: whatsappy
+::: whatsapie

@@ -1,3 +1,3 @@
-# whatsappy/ext/message/media.py
+# whatsapie/ext/message/media.py
 
-::: whatsappy.ext.message.media
+::: whatsapie.ext.message.media

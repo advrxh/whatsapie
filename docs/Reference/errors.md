@@ -1,3 +1,3 @@
-# whatsappy/errors.py
+# whatsapie/errors.py
 
-::: whatsappy.errors
+::: whatsapie.errors
