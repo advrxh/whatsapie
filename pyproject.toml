@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "whatsappy"
-version = "0.1.6"
+version = "0.1.7"
 description = "Unofficial Python wrapper for Meta's whatsapp cloud API"
 readme = "README.md"
 homepage = "https://github.com/advrxh/whatsappy"
