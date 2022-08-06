@@ -90,7 +90,7 @@ asyncio.run(main())
 
 Now we're going to make an instance of the `#! TextMessage` class, which represents a text message api object. A `to` and `body` argument are required in a TextMessage. Every message classe, regardless of its type, receives the `to` parameter.
 
-```py title="hello_world.py" linenums="1" hl_lines="10"
+```py title="hello_world.py" linenums="1" hl_lines="12 13 14 15"
 import asyncio
 
 from whatsapie import Whatsapie, TextMessage
