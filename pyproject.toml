@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "whatsapie"
-version = "0.1.9"
+version = "0.2.0"
 description = "Unofficial Python wrapper for Meta's whatsapp cloud API"
 authors = ["Aadil Varsh <aadilvarshofficial@gmail.com>"]
 license = "MIT"
