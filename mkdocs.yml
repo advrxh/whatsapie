@@ -40,6 +40,8 @@ nav:
     - 'Text Messages': Examples/TextMessage.md
     - 'Media Messages': Examples/MediaMessage.md
     - 'Location Messages': Examples/LocationMessage.md
+    - 'Message Groups' : Examples/MessageGroup.md
+    - 'Logs' : Examples/InfoLogs.md
   - 'Reference':
     - 'errors.py': Reference/errors.md
     - 'constants.py': Reference/constants.md
