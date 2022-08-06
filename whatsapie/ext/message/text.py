@@ -1,4 +1,4 @@
-from whatsapie.ext.message import Message
+from whatsapie.ext.message.message import Message
 
 
 class TextMessage(Message):
@@ -13,9 +13,9 @@ class TextMessage(Message):
 
     def __init__(
         self,
-        to: str,
         body: str,
         preview_url: bool = False,
+        to: str = None,
     ) -> None:
         self.body = body
         self.preview_url = preview_url

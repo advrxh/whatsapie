@@ -1,4 +1,4 @@
-from whatsapie.ext.message import Message
+from whatsapie.ext.message.message import Message
 
 
 class LocationMessage(Message):
@@ -15,11 +15,11 @@ class LocationMessage(Message):
 
     def __init__(
         self,
-        to: str,
         long: str = None,
         lat: str = None,
         name: str = None,
         address: str = None,
+        to: str = None,
     ):
         self.set_params(long=long, lat=lat, name=name, address=address)
         super().__init__(to=to)

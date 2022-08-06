@@ -5,5 +5,5 @@ class Message:
         to: Phone number of the recipient, must not contain '+' prefix.
     """
 
-    def __init__(self, to: str) -> None:
+    def __init__(self, to: str = None) -> None:
         self.to = to

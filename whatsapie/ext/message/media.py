@@ -1,9 +1,6 @@
-from whatsapie.ext.message import Message
-
-from whatsapie.constants import (
-    CAPTION_ALLOWED_MEDIA_TYPES,
-    FILENAME_ALLOWED_MEDIA_TYPES,
-)
+from whatsapie.constants import (CAPTION_ALLOWED_MEDIA_TYPES,
+                                 FILENAME_ALLOWED_MEDIA_TYPES)
+from whatsapie.ext.message.message import Message
 
 
 class MediaMessage(Message):
@@ -20,11 +17,11 @@ class MediaMessage(Message):
 
     def __init__(
         self,
-        to: str,
         type: str = None,
         link: str = None,
         caption: str = None,
         filename: str = None,
+        to: str = None,
     ):
 
         self.set_params(type=type, link=link, caption=caption, filename=filename)

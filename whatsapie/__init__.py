@@ -61,3 +61,14 @@ class Whatsapie:
             return True
 
         raise ErrorResponse(response)
+
+    async def send_group(self, message_group:MessageGroup):
+
+        async with httpx.AsyncClient(base_url=self.url) as client:
+            tasks = []
+            for message in message_group.message_list:
+                tasks.append(
+                    asyncio.create_task(self.post(client=client, message=message))
+                )
+
+            await asyncio.gather(*tasks)
