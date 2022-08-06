@@ -12,6 +12,7 @@ keywords = ["whatsapp", "cloud", "api", "python", "wrapper"]
 [tool.poetry.dependencies]
 python = "^3.10"
 httpx = "^0.23.0"
+loguru = "^0.6.0"
 
 [tool.poetry.dev-dependencies]
 

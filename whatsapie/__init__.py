@@ -1,6 +1,7 @@
 import asyncio
 
 import httpx
+from loguru import logger
 
 from whatsapie.constants import (META_GRAPH_API_ENDPOINT,
                                  META_GRAPH_API_VERSION, REQUEST_HEADERS)
@@ -15,7 +16,7 @@ class Whatsapie:
     httpx to Meta's cloud api.
     """
 
-    def __init__(self, access_token: str, phone_number_id: str) -> None:
+    def __init__(self, access_token: str, phone_number_id: str, log:bool=False) -> None:
         """Initializes the whatsapie manager class.
 
         Args:
@@ -26,6 +27,7 @@ class Whatsapie:
         self.schema_generator = SchemaGenerator()
         self.access_token = access_token
         self.phone_number_id = phone_number_id
+        self.log = log
 
         self.url = META_GRAPH_API_ENDPOINT.format(
             version=META_GRAPH_API_VERSION, phone_number_id=self.phone_number_id
@@ -57,7 +59,8 @@ class Whatsapie:
         response = await client.post(url="/", data=body, headers=headers)
 
         if response.status_code == 200:
-            
+            if self.log:
+                logger.info(f"OK | {response.status_code} | {response.text}") 
             return True
 
         raise ErrorResponse(response)
