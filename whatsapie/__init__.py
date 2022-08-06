@@ -1,19 +1,16 @@
-import requests as rq
+import httpx as rq
 
+from whatsapie.constants import (META_GRAPH_API_ENDPOINT,
+                                 META_GRAPH_API_VERSION, REQUEST_HEADERS)
+from whatsapie.errors import ErrorResponse
 from whatsapie.ext.message import *
 from whatsapie.schema_generator import SchemaGenerator
-from whatsapie.errors import ErrorResponse
-from whatsapie.constants import (
-    META_GRAPH_API_ENDPOINT,
-    META_GRAPH_API_VERSION,
-    REQUEST_HEADERS,
-)
 
 
 class Whatsapie:
     """
     Whatsapp Cloud API manager class, this class handles the functions of making
-    requests to Meta's cloud api.
+    httpx to Meta's cloud api.
     """
 
     def __init__(self, access_token: str, phone_number_id: str) -> None:

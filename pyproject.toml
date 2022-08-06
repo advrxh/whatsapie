@@ -2,19 +2,12 @@
 name = "whatsapie"
 version = "0.1.7"
 description = "Unofficial Python wrapper for Meta's whatsapp cloud API"
-readme = "README.md"
-homepage = "https://advrxh.github.io/whatsapie"
-repository = "https://github.com/advrxh/whatsapie"
-keywords = ["whatsapp", "cloud", "api", "python", "wrapper"]
 authors = ["Aadil Varsh <aadilvarshofficial@gmail.com>"]
 license = "MIT"
-include = [
-    "LICENSE"
-]
 
 [tool.poetry.dependencies]
 python = "^3.10"
-requests = "^2.27.1"
+httpx = "^0.23.0"
 
 [tool.poetry.dev-dependencies]
 

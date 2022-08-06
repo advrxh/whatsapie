@@ -5,7 +5,7 @@ Meta API Constants:
     __**META_GRAPH_API_VERSION**__: Package specific Meta Graph API version.
 
 Request Constants:
-    __**REQUEST_HEADERS**__: Common request headers for all requests made from the wrapper.
+    __**REQUEST_HEADERS**__: Common request headers for all httpx made from the wrapper.
 
 Media Constants:
     __**CAPTION_ALLOWED_MEDIA_TYPES**__: Media types in which captions are allowed.
