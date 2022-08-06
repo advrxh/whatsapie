@@ -1,4 +1,6 @@
-import httpx as rq
+import asyncio
+
+import httpx
 
 from whatsapie.constants import (META_GRAPH_API_ENDPOINT,
                                  META_GRAPH_API_VERSION, REQUEST_HEADERS)
@@ -29,7 +31,7 @@ class Whatsapie:
             version=META_GRAPH_API_VERSION, phone_number_id=self.phone_number_id
         )
 
-    def send(self, message: Message):
+    async def send(self, message: Message):
         """Invoke this method from an instance to send a whatsapp message
 
         Args:
@@ -41,13 +43,21 @@ class Whatsapie:
         Raises:
             ErrorResponse: If the Cloud API returns and error response
         """
+
+
+        async with httpx.AsyncClient(base_url=self.url) as client:
+            await self.post(client=client, message=message)
+
+    async def post(self, client, message):
         body = self.schema_generator.generate(message, dump_json_str=True)
+
         headers = REQUEST_HEADERS
         headers["Authorization"] = f"Bearer {self.access_token}"
 
-        response = rq.post(self.url, headers=headers, data=body)
+        response = await client.post(url="/", data=body, headers=headers)
 
         if response.status_code == 200:
+            
             return True
 
         raise ErrorResponse(response)
