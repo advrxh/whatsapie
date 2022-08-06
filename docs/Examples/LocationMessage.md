@@ -1,6 +1,8 @@
 ## Basic Location Message
 
 ```py title="hello_world.py" linenums="1"
+import asyncio
+
 from whatsapie import Whatsapie, LocationMessage
 
 manager = Whatsapie(ACCESS_TOKEN, PHONE_NUMBER_ID)
@@ -14,6 +16,9 @@ location_message = LocationMessage(
 
 )
 
-manager.send(location_message)
+async def main():
+    await manager.send(location_message)
+
+asyncio.run(main())
 
 ```

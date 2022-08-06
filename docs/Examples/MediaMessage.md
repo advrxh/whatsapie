@@ -1,6 +1,8 @@
 ### Basic Media Message
 
 ```py title="hello_world.py" linenums="1"
+import asyncio
+
 from whatsapie import Whatsapie, MediaMessage
 
 manager = Whatsapie(ACCESS_TOKEN, PHONE_NUMBER_ID)
@@ -14,6 +16,9 @@ location_message = MediaMessage(
 
 )
 
-manager.send(media_message)
+async def main():
+    await manager.send(media_message)
+
+asyncio.run(main())
 
 ```
