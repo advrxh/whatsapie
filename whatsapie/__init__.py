@@ -17,7 +17,9 @@ class Whatsapie:
     httpx to Meta's cloud api.
     """
 
-    def __init__(self, access_token: str, phone_number_id: str, log:bool=False) -> None:
+    def __init__(
+        self, access_token: str, phone_number_id: str, log: bool = False
+    ) -> None:
         """Initializes the whatsapie manager class.
 
         Args:
@@ -54,7 +56,7 @@ class Whatsapie:
         """Invoke this method from an instance to send a whatsapp message
 
         Args:
-            message: Must be a type of Message Instance supports **TextMessage, LocationMessage, MediaMessage**
+            message: Must be a type of Message Instance supports **Text, Location, Media**
 
         Returns:
             A bool status of the performed api call
@@ -62,7 +64,6 @@ class Whatsapie:
         Raises:
             ErrorResponse: If the Cloud API returns and error response
         """
-
 
         async with httpx.AsyncClient(base_url=self.url) as client:
             await self.post(client=client, message=message)
@@ -77,12 +78,12 @@ class Whatsapie:
 
         if response.status_code == 200:
             if self.log:
-                logger.info(f"OK | {response.status_code} | {response.text}") 
+                logger.info(f"OK | {response.status_code} | {response.text}")
             return True
 
         raise ErrorResponse(response)
 
-    async def send_group(self, message_group:MessageGroup):
+    async def send_group(self, message_group: Group):
 
         async with httpx.AsyncClient(base_url=self.url) as client:
             tasks = []

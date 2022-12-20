@@ -1,8 +1,6 @@
 from whatsapie.ext.message import MediaMessage
-from whatsapie.constants import (
-    CAPTION_ALLOWED_MEDIA_TYPES,
-    FILENAME_ALLOWED_MEDIA_TYPES,
-)
+from whatsapie.constants import (CAPTION_ALLOWED_MEDIA_TYPES,
+                                 FILENAME_ALLOWED_MEDIA_TYPES)
 
 
 def generate_media_schema(body: dict, message: MediaMessage):
