@@ -1,14 +1,14 @@
-from whatsapie.ext.message import MediaMessage
 from whatsapie.constants import (CAPTION_ALLOWED_MEDIA_TYPES,
                                  FILENAME_ALLOWED_MEDIA_TYPES)
+from whatsapie.ext.message import Media
 
 
-def generate_media_schema(body: dict, message: MediaMessage):
-    """Generate schema for MediaMessage.
+def generate_media_schema(body: dict, message: Media):
+    """Generate schema for Media.
 
     Args:
         body: Parent api schema object.
-        message: MediaMessage instance.
+        message: Media instance.
 
     Returns:
         body: Schema body

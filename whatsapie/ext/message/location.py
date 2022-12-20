@@ -1,7 +1,7 @@
 from whatsapie.ext.message.message import Message
 
 
-class LocationMessage(Message):
+class Location(Message):
     """Inherits from Message class.
 
     Inherits from Message class, represents a Location Message api object.

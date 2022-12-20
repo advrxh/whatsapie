@@ -3,7 +3,7 @@ from whatsapie.constants import (CAPTION_ALLOWED_MEDIA_TYPES,
 from whatsapie.ext.message.message import Message
 
 
-class MediaMessage(Message):
+class Media(Message):
     """Inherits from Message class.
 
     Inherits from Message class, represents a Media Message api object.

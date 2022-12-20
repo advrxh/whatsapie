@@ -1,9 +1,9 @@
 from typing import List
 
-from whatsapie.ext.message.location import LocationMessage
-from whatsapie.ext.message.media import MediaMessage
+from whatsapie.ext.message.location import Location
+from whatsapie.ext.message.media import Media
 from whatsapie.ext.message.message import Message
-from whatsapie.ext.message.text import TextMessage
+from whatsapie.ext.message.text import Text
 
 
 class Group:
@@ -13,7 +13,7 @@ class Group:
         message_list: List of Messsage objects
     """
 
-    def __init__(self, message_list: List[TextMessage | MediaMessage | LocationMessage], to: str = None):
+    def __init__(self, message_list: List[Text | Media | Location], to: str = None):
         self.message_list = message_list 
         self.to = to
 

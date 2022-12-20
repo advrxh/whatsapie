@@ -1,7 +1,7 @@
 from whatsapie.ext.message.message import Message
 
 
-class TextMessage(Message):
+class Text(Message):
     """Inherits from Message class.
 
     Inherits from Message class, represents a Text Message api object.

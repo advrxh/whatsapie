@@ -1,6 +1,6 @@
 import json
 
-from whatsapie.ext import Message, TextMessage, LocationMessage, MediaMessage
+from whatsapie.ext import Message, Text, Location, Media, Template, ContactGroup
 
 from whatsapie.schema_generator.text_schema import generate_text_schema
 from whatsapie.schema_generator.location_schema import generate_location_schema
@@ -25,7 +25,7 @@ class SchemaGenerator:
         """Generates schema for the provided message argument.
 
         Args:
-            message: Must be a type of Message Instance supports **TextMessage, LocationMessage, MediaMessage**.
+            message: Must be a type of Message Instance supports **Text, Location, Media**.
             dump_json_str: When set to false, will return native python dict.
 
         Returns:
@@ -34,13 +34,13 @@ class SchemaGenerator:
         body = {"messaging_product": "whatsapp", "recipient_type": "individual"}
         body["to"] = message.to
 
-        if isinstance(message, TextMessage):
+        if isinstance(message, Text):
             body = generate_text_schema(body, message)
 
-        if isinstance(message, LocationMessage):
+        if isinstance(message, Location):
             body = generate_location_schema(body, message)
 
-        if isinstance(message, MediaMessage):
+        if isinstance(message, Media):
             body = generate_media_schema(body, message)
 
         if dump_json_str:

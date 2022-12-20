@@ -1,12 +1,12 @@
-from whatsapie.ext.message import TextMessage
+from whatsapie.ext.message import Text
 
 
-def generate_text_schema(body: dict, message: TextMessage):
-    """Generate schema for TextMessage.
+def generate_text_schema(body: dict, message: Text):
+    """Generate schema for Text.
 
     Args:
         body: Parent api schema object.
-        message: TextMessage instance.
+        message: Text instance.
 
     Returns:
         body: Schema body
