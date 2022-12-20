@@ -1,4 +1,5 @@
 import asyncio
+from pprint import pprint
 
 import httpx
 from loguru import logger
@@ -32,6 +33,22 @@ class Whatsapie:
         self.url = META_GRAPH_API_ENDPOINT.format(
             version=META_GRAPH_API_VERSION, phone_number_id=self.phone_number_id
         )
+
+    def inspect_schema(self, message: Message, pretty_print: bool = True):
+        """Invoke this method from an instance to inspect the api schema of this message
+
+
+        Args:
+            message: Must be a type of Message Instance supports **Text, Location, Media**
+        """
+
+        body = self.schema_generator.generate(message, dump_json_str=False)
+
+        if not pretty_print:
+            return body
+
+        pprint(body, depth=2, width=4)
+        return body
 
     async def send(self, message: Message):
         """Invoke this method from an instance to send a whatsapp message
