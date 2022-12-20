@@ -3,11 +3,11 @@
 ```py title="hello_world.py" linenums="1"
 import asyncio
 
-from whatsapie import Whatsapie, TextMessage
+from whatsapie import Whatsapie, Text
 
 manager = Whatsapie(ACCESS_TOKEN, PHONE_NUMBER_ID)
 
-text_message = TextMessage(
+text_message = Text(
     to="1XXXXXXXXX",
     body="Hello world"
 )
@@ -24,11 +24,11 @@ asyncio.run(main())
 ```py title="hello_world.py" linenums="1"
 import asyncio
 
-from whatsapie import whatsapie, TextMessage
+from whatsapie import whatsapie, Text
 
 manager = Whatsapie(ACCESS_TOKEN, PHONE_NUMBER_ID)
 
-text_message = TextMessage(
+text_message = Text(
     to="1XXXXXXXXX",
     body="Hello world, https://helloworld.com",
     preview_url=True

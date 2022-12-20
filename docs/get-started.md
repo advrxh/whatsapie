@@ -9,11 +9,11 @@ Here's how to use whatsapie to send a short hello world message to a Whatsapp su
 ```py title="hello_world.py" linenums="1"
 import asyncio
 
-from whatsapie import Whatsapie, TextMessage
+from whatsapie import Whatsapie, Text
 
 manager = Whatsapie(ACCESS_TOKEN, PHONE_NUMBER_ID)
 
-text_message = TextMessage(
+text_message = Text(
     to="1XXXXXXXXX", # recipients registered whatsapp number
     body="Hello world"
 )
@@ -33,11 +33,11 @@ Let's take a closer look at what's happening!
 ```py title="hello_world.py" linenums="1" hl_lines="3"
 import asyncio
 
-from whatsapie import Whatsapie, TextMessage
+from whatsapie import Whatsapie, Text
 
 manager = Whatsapie(ACCESS_TOKEN, PHONE_NUMBER_ID)
 
-text_message = TextMessage(
+text_message = Text(
     to="1XXXXXXXXX", # recipients registered whatsapp number
     body="Hello world"
 )
@@ -48,16 +48,16 @@ async def main():
 asyncio.run(main())
 ```
 
-`Whatsapie` and `TextMessage` are two classes from our package that we're importing. The primary manager class is whatsapie, and you must use it to create a new manager. You can have several managers for your various WhatsApp businesses.
+`Whatsapie` and `Text` are two classes from our package that we're importing. The primary manager class is whatsapie, and you must use it to create a new manager. You can have several managers for your various WhatsApp businesses.
 
 ```py title="hello_world.py" linenums="1" hl_lines="5"
 import asyncio
 
-from whatsapie import Whatsapie, TextMessage
+from whatsapie import Whatsapie, Text
 
 manager = Whatsapie(ACCESS_TOKEN, PHONE_NUMBER_ID)
 
-text_message = TextMessage(
+text_message = Text(
     to="1XXXXXXXXX", # recipients registered whatsapp number
     body="Hello world"
 )
@@ -73,11 +73,11 @@ Both `ACCESS_TOKEN` and `PHONE_NUMBER_ID` are now sent as parameters. Both of th
 ```py title="hello_world.py" linenums="1" hl_lines="7 8 9 10"
 import asyncio
 
-from whatsapie import Whatsapie, TextMessage
+from whatsapie import Whatsapie, Text
 
 manager = Whatsapie(ACCESS_TOKEN, PHONE_NUMBER_ID)
 
-text_message = TextMessage(
+text_message = Text(
     to="1XXXXXXXXX", # recipients registered whatsapp number
     body="Hello world"
 )
@@ -88,16 +88,16 @@ async def main():
 asyncio.run(main())
 ```
 
-Now we're going to make an instance of the `#! TextMessage` class, which represents a text message api object. A `to` and `body` argument are required in a TextMessage. Every message classe, regardless of its type, receives the `to` parameter.
+Now we're going to make an instance of the `#! Text` class, which represents a text message api object. A `to` and `body` argument are required in a Text. Every message classe, regardless of its type, receives the `to` parameter.
 
 ```py title="hello_world.py" linenums="1" hl_lines="12 13 14 15"
 import asyncio
 
-from whatsapie import Whatsapie, TextMessage
+from whatsapie import Whatsapie, Text
 
 manager = Whatsapie(ACCESS_TOKEN, PHONE_NUMBER_ID)
 
-text_message = TextMessage(
+text_message = Text(
     to="1XXXXXXXXX", # recipients registered whatsapp number
     body="Hello world"
 )
