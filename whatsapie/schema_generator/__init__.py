@@ -5,6 +5,7 @@ from whatsapie.ext import Message, Text, Location, Media, Template, ContactGroup
 from whatsapie.schema_generator.text_schema import generate_text_schema
 from whatsapie.schema_generator.location_schema import generate_location_schema
 from whatsapie.schema_generator.media_schema import generate_media_schema
+from whatsapie.schema_generator.template_schema import generate_template_schema
 from whatsapie.schema_generator.contact_schema import generate_contact_group_schema
 
 
@@ -43,6 +44,9 @@ class SchemaGenerator:
 
         if isinstance(message, Media):
             body = generate_media_schema(body, message)
+
+        if isinstance(message, Template):
+            body = generate_template_schema(body, message)
 
         if isinstance(message, ContactGroup):
             body = generate_contact_group_schema(body, message)
